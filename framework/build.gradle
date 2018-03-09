@@ -22,6 +22,10 @@ ext {
     cdvBuildToolsVersion = privateHelpers.findLatestInstalledBuildTools()
 }
 
+configurations.all {
+  resolutionStrategy.force 'com.android.support:support-v4:27+'
+}
+
 buildscript {
     repositories {
         jcenter()
